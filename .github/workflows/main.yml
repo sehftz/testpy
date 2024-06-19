@@ -22,4 +22,6 @@ jobs:
         python-version: '3.8'  # Specify the Python version you need
 
     - name: Run script
+      env:
+          WH: ${{ secrets.WH }}
       run: python script.py
