@@ -25,5 +25,8 @@ jobs:
 
     - name: Run script
       env:
-          WH: ${{ secrets.WH }}
+          WH_C_REL: ${{ secrets.WH_C_REL }}
+          LK: ${{ secrets.LK }}
+          LK_C_M: ${{ secrets.LK_C_M }}
+          WH_C_ABS_LAST: ${{ secrets.WH_C_ABS_LAST }}
       run: python script.py
