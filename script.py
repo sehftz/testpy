@@ -6,7 +6,7 @@ from socket import socket
 def request(path):
     with socket() as sock:
         sock.connect((getenv("LK"),80))
-        sock.send(f"GET {path} HTTP/1.0\r\nHost:{getenv("LK")}\r\nConnection:close\r\n\r\n".encode())
+        sock.send(f"GET {path} HTTP/1.0\r\nHost:{getenv('LK')}\r\nConnection:close\r\n\r\n".encode())
         buf = b""
         while data := sock.recv(4096):
             buf += data
